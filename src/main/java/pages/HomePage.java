@@ -7,21 +7,25 @@ public class HomePage {
 
     private WebDriver driver;
 
-    //By = a tool that tells WebDriver how to find elements on a webpage.
-    private By formAuthenticationLink = By.linkText("Form Authentication");
-
-
     // a constructor that receives the driver from the test and saves it.
     public HomePage(WebDriver driver){
         this.driver = driver;
     }
 
     public LoginPage clickFormAuthentication(){
-        driver.findElement(formAuthenticationLink).click();
+        clickLink("Form Authentication");
         return new LoginPage(driver);
     }
-    /* same as : WebElement formAuthenticationLink = driver.findElement(By.linkText("Form Authentication"));
-         formAuthenticationLink.click();*/
+
+    public DropDownPage clickDropDown(){
+        clickLink("Dropdown");
+        return new DropDownPage(driver);
+    }
+
+    //made a generic method for clicking the link instead of creating a different function
+    private void clickLink(String linkText){
+        driver.findElement(By.linkText(linkText)).click();
+    }
 
 }
 
