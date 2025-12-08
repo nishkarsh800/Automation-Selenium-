@@ -22,6 +22,10 @@ public class HomePage {
         return new DropDownPage(driver);
     }
 
+    public HoversPage clickHovers(){
+        clickLink("Hovers");
+        return new HoversPage(driver);
+    }
     //made a generic method for clicking the link instead of creating a different function
     private void clickLink(String linkText){
         driver.findElement(By.linkText(linkText)).click();
