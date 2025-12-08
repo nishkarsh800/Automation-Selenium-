@@ -26,6 +26,11 @@ public class HomePage {
         clickLink("Hovers");
         return new HoversPage(driver);
     }
+
+    public KeyPressesPage clickKeyPresses(){
+        clickLink("Key Presses");
+        return new KeyPressesPage(driver);
+    }
     //made a generic method for clicking the link instead of creating a different function
     private void clickLink(String linkText){
         driver.findElement(By.linkText(linkText)).click();
