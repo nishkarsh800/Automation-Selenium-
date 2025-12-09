@@ -31,6 +31,11 @@ public class HomePage {
         clickLink("Key Presses");
         return new KeyPressesPage(driver);
     }
+
+    public AlertsPage clickJavaScriptAlerts(){
+        clickLink("JavaScript Alerts");
+        return new AlertsPage(driver);
+    }
     //made a generic method for clicking the link instead of creating a different function
     private void clickLink(String linkText){
         driver.findElement(By.linkText(linkText)).click();
