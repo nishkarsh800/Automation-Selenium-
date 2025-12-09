@@ -36,6 +36,11 @@ public class HomePage {
         clickLink("JavaScript Alerts");
         return new AlertsPage(driver);
     }
+
+    public FileUploadPage clickFileUpload(){
+        clickLink("File Upload");
+        return new FileUploadPage(driver);
+    }
     //made a generic method for clicking the link instead of creating a different function
     private void clickLink(String linkText){
         driver.findElement(By.linkText(linkText)).click();
