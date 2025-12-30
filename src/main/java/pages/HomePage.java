@@ -56,6 +56,11 @@ public class HomePage {
         clickLink("Large & Deep DOM");
         return new LargeAndDeepDomPage(driver);
    }
+
+   public InfiniteScrollPage clickInfiniteScroll(){
+        clickLink("Infinite Scroll");
+        return new InfiniteScrollPage(driver);
+   }
     //made a generic method for clicking the link instead of creating a different function
     private void clickLink(String linkText){
         driver.findElement(By.linkText(linkText)).click();
