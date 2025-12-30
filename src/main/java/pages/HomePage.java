@@ -51,6 +51,11 @@ public class HomePage {
         clickLink("Dynamic Loading");
         return new DynamicLoadingPage(driver);
     }
+
+   public LargeAndDeepDomPage clickLargeAndDeepDom(){
+        clickLink("Large & Deep DOM");
+        return new LargeAndDeepDomPage(driver);
+   }
     //made a generic method for clicking the link instead of creating a different function
     private void clickLink(String linkText){
         driver.findElement(By.linkText(linkText)).click();
