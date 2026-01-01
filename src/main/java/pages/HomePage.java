@@ -61,6 +61,11 @@ public class HomePage {
         clickLink("Infinite Scroll");
         return new InfiniteScrollPage(driver);
    }
+
+   public MultipleWindowsPage clickMultiplewindows(){
+        clickLink("Multiple Windows");
+        return new MultipleWindowsPage(driver);
+   }
     //made a generic method for clicking the link instead of creating a different function
     private void clickLink(String linkText){
         driver.findElement(By.linkText(linkText)).click();
